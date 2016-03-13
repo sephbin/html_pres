@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style type="text/css">
+	body{
+		background-size: 100% auto;
+		background-position: center;
+	}
+	div{
+		position: absolute;
+		top:0;
+		bottom: 0;
+		left:0;
+		right:0;
+		background-size: 100% auto;
+		background-position: center;
+	}
+	mark{
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		background-color: transparent;
+	}
+	h1{
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+<div class="background" style="z-index:-1"></div>
+<div id="0" background="#aed581">
+<h1><mark>WORD 1</mark></h1>
+</div>
+<div id="1" style="display:none" background="im/background.jpg">
+<h1>WORD 2</h1>
+</div>
+<div id="2" style="display:none" background="#ff7043">
+<h1>WORD 3</h1>
+</div>
+</body>
+<script src="js/jquery-2.2.0.min.js"></script>
+<script src="js/reveal.js"></script>
+<script type="text/javascript">
+	i = 0;
+function toggleOff(){
+	$('#'+i).fadeToggle();
+}
+function toggleOn(){
+	$('#'+i).fadeToggle();
+	var slideB = $('#'+i).attr('background');
+	if(slideB == undefined){
+		slideB = "#FFF";
+	}
+	var isOk = /^#[0-9A-F]{3,6}$/i.test(slideB);
+	console.log(isOk);
+	if(isOk){
+	var backgroundCSS = "background-color"	
+	var slideBackground = $('#'+i).attr('background');	
+	}else{
+	var backgroundCSS = "background-image"	
+	var slideBackground = 'url("'+$('#'+i).attr('background')+'")';
+	}
+	$('#'+i).css(backgroundCSS,slideBackground);
+	setTimeout(function () {
+	$('.background').css("background-image","","background-color","none").css(backgroundCSS,slideBackground);
+	}, 300);
+}
+
+var maxI = 0
+$('div').each(function(){
+	maxITest = $(this).attr('id');
+	if (maxITest >> maxI){
+		maxI = maxITest;
+	}
+});
+
+
+$("body").keydown(function(e) {
+  if(e.keyCode == 37) { // left
+    if(i!=0){
+    toggleOff();
+    i-= 1;
+    toggleOn();
+    }
+  }
+  else if(e.keyCode == 39) { // right
+    if(i!=maxI){
+    toggleOff();
+    i+= 1;
+    toggleOn();
+	}
+  }
+});
+
+
+</script>
+</html>
