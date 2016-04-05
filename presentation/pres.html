@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style type="text/css">
+	
+	@font-face {
+	font-family: "F1";
+	src: url(font/Biko_Bold.otf) format("truetype");
+	}
+	@font-face {
+	font-family: "F2";
+	src: url(font/Capita.ttf) format("truetype");
+	}
+	*{
+		font-family: "F1", sans-serif;
+	}
+	body{
+		background-size: 100% auto;
+		background-position: center;
+		overflow: hidden;
+	}
+	div.slide{
+		position: absolute;
+		top:0;
+		bottom: 0;
+		left:0;
+		right:0;
+		background-size: 100% auto;
+		background-position: center;
+	}
+	div.image{
+		z-index: 10;
+		position: absolute;
+		left:50%;
+		top:50%;
+		transform: translate(-50%,-50%);
+		background-size: 100% auto;
+		background-position: center;
+	}
+	div.subtitle{
+		position: absolute;
+		right:0;
+		bottom:10px;
+		height: 80px;
+		background-color: rgba(0,0,0,.75);
+		border-top-left-radius: 20px;
+		border-bottom-left-radius: 20px;
+	}
+	h2.example{
+		color: white;
+		margin-left: 20px;
+		margin-right: 100px;
+		margin-bottom: 0px;
+		margin-top: 10px;
+		font-family: "F2";
+	}
+	mark{
+		color: white;
+		position: fixed;
+		bottom: 25px;
+		right: 100px;
+		background-color: rgba(0,0,0,0);
+	}
+	h1{
+		text-align: center;
+		font-size: 8em;
+	}
+	h2{
+		text-align: center;
+		font-size: 3em;
+	}
+	img{
+		max-height: 50%;
+	}
+	svg.ico{
+		position: fixed;
+		bottom: 0px;
+		right: 0px;
+	}
+	
+</style>
+</head>
+<body>
+<div class="background" style="z-index:-1"></div>
+<div id="0" background="#aed581">
+<h1><mark>WORD 1</mark></h1>
+</div>
+<div id="1" style="display:none" background="im/background.jpg">
+<h1>WORD 2</h1>
+</div>
+<div id="2" style="display:none" background="#ff7043">
+<h1>WORD 3</h1>
+</div>
+</body>
+<script src="js/jquery-2.2.0.min.js"></script>
+<script src="js/reveal.js"></script>
+<script type="text/javascript">
+//Presentation for Cox
+//They want me to explain the capabilities of the Comp Des team
+
+var a = {"slides":[
+{"title":"Rhino<br>Grasshopper<br>Coding", "class":"t1"},
+{"title":"Instrument for tool making","image":"tool.jpg"},
+{"title":"CCCCC"},
+{"title":"Computation","svg":"gear.svg", "colour":"#f44336", "class":"t1"},
+{"title":"", "image":"compDefinition.jpg", "colour":"#f44336", "ico":"gear.svg", "tcolor":"#f44336"},
+{"title":"Automation", "image":"Automation.jpg", "colour":"#f44336", "ico":"gear.svg", "tcolor":"#f44336"},
+{"class":"example", "title":"Adelaide Oval", "image":"", "background":"im/Adelaide-Oval_004.jpg", "ico":"gear.svg", "tcolor":"#f44336"},
+{"title":"Data", "image":"Data.png", "ico":"gear.svg", "tcolor":"#f44336"},
+{"class":"example", "title":"Parramatta", "image":"", "background":"im/Masterplan.jpg", "ico":"gear.svg", "tcolor":"#f44336"},
+{"title":"Creation", "colour":" #2196f3","class":"t1"},
+{"title":"", "image":"createDefinition.jpg", "ico":"art.svg", "tcolor":" #2196f3"},
+{"title":"Shape Making", "ico":"art.svg", "tcolor":" #2196f3"},
+{"class":"example", "title":"Tian Jing", "image":"", "ico":"art.svg", "tcolor":" #2196f3"},
+{"title":"Form Finding", "ico":"art.svg", "tcolor":" #2196f3"},
+{"class":"example", "title":"Malaysian Convention", "image":"", "ico":"art.svg", "tcolor":" #2196f3"},
+{"title":"Geometric Solutions", "ico":"art.svg", "tcolor":" #2196f3"},
+{"class":"example", "title":"Barangaroo Ferry Hub", "image":"", "ico":"art.svg", "tcolor":" #2196f3"},
+{"title":"Calculation","colour":"#4caf50", "class":"t1"},
+{"title":"", "image":"calcDefinition.jpg", "ico":"technology.svg", "tcolor":" #4caf50"},
+{"title":"Yields", "ico":"technology.svg", "tcolor":" #4caf50"},
+{"class":"example", "title":"Durban Point", "image":"", "ico":"technology.svg", "tcolor":" #4caf50"},
+{"title":"Solar Analysis", "ico":"technology.svg", "tcolor":" #4caf50"},
+{"class":"example", "title":"Ivanhoe/Channel 9", "image":"", "ico":"technology.svg", "tcolor":" #4caf50"},
+{"title":"Responsive Designs", "ico":"technology.svg", "tcolor":" #4caf50"},
+{"class":"example", "title":"", "image":"", "ico":"technology.svg", "tcolor":" #4caf50"},
+{"title":"Isochrones", "ico":"technology.svg", "tcolor":" #4caf50"},
+{"class":"example", "title":"Chatswood/Largescale Projects", "image":"", "ico":"technology.svg", "tcolor":" #4caf50"},
+{"title":"Logistical Sheduling", "ico":"technology.svg", "tcolor":" #4caf50"},
+{"class":"example", "title":"AFC", "image":"", "ico":"technology.svg", "tcolor":" #4caf50"},
+{"title":"Communication", "colour":"#ff9800", "class":"t1"},
+{"title":"", "image":"comDefinition.jpg", "ico":"round.svg", "tcolor":" #ff9800"},
+{"title":"SVG", "ico":"round.svg", "tcolor":" #ff9800"},
+{"class":"example", "title":"Durban Masterplan", "image":"", "ico":"round.svg", "tcolor":" #ff9800"},
+{"title":"Assisting Rendering", "ico":"round.svg", "tcolor":" #ff9800"},
+{"title":"Real Time Environments", "ico":"round.svg", "tcolor":" #ff9800"},
+{"class":"example", "title":"Nothin", "image":"", "ico":"round.svg", "tcolor":" #ff9800"},
+{"title":"Virtual Reality", "ico":"round.svg", "tcolor":" #ff9800"},
+{"class":"example", "title":"Rooty Hill", "image":"", "ico":"round.svg", "tcolor":" #ff9800"},
+{"title":"Collaboration", "colour":"#9c27b0", "class":"t1"},
+{"title":"", "image":"collabDefinition.jpg", "ico":"person.svg", "tcolor":"#9c27b0"},
+{"title":"Grasshopper to Revit", "ico":"person.svg", "tcolor":"#9c27b0"},
+{"class":"example", "title":"Barangaroo Ferry Hub", "image":"", "ico":"person.svg", "tcolor":"#9c27b0"},
+{"class":"example", "title":"New Perth Stadium", "image":"", "ico":"person.svg", "tcolor":"#9c27b0"},
+{"title":"Grasshopper to Illustrator", "ico":"person.svg", "tcolor":"#9c27b0"},
+{"class":"example", "title":"Uluru", "image":"", "ico":"person.svg", "tcolor":"#9c27b0"},
+{"title":"Grasshopper to Excel", "ico":"person.svg", "tcolor":"#9c27b0"},
+{"class":"example", "title":"Durban/Something", "image":"", "ico":"person.svg", "tcolor":"#9c27b0"},
+{"title":"Conclusion"},
+]};
+
+var sC = '';
+var maxI = 0;
+$.each(a.slides,function(i,k,v){
+	if(k.background){
+		bG=k.background;
+	}else{
+		bG="";
+	}
+
+	if(i==0){
+	sC+= '<div class="slide" id="'+i+'" background="'+bG+'">';
+	}else{
+	sC+= '<div class="slide" style="display:none" id="'+i+'" background="'+bG+'">';
+	}
+	
+	if(k.class=="example"){
+		sC+='<div class="subtitle">';
+		sC+='<h2 class="example">';
+		sC+=k.title;
+		sC+='</h2>';
+		sC+='</div>';
+	}
+	var titleColour = "#000";
+	if(k.colour){
+		titleColour = k.colour;
+	}
+
+	if(k.title && k.class!="example"){
+		if(k.class=="t1"){
+		sC += '<h1 style="color:'+titleColour+'">'+k.title+'</h1>';
+		}else{
+		sC += '<h2>'+k.title+'</h2>';	
+		}
+	}
+
+	if(k.image){
+		sC += '<div class="image">';
+		sC += '<img id="'+k.image+'" src="im/'+k.image+'">';
+		sC += '</div>';
+	}
+	if(k.svg){
+		sC += '<div class="image">';
+		sC += '<svg width="300" height="300"><polygon style="fill:'+k.tcolor+'"/><image x="0" y="0" height="300" width="300" xlink:href="im/'+k.svg+'"></svg>'
+		sC += '</div>';
+	}
+	if(k.ico){
+	sC+= '<svg class="ico" width="100" height="100"><polygon style="fill:'+k.tcolor+'" points="100,0 0,100 100,100"/><image x="52" y="52" height="35" width="35" xlink:href="ico/'+k.ico+'"></svg>';
+	}
+	sC+= '</div>'
+	maxI = i;
+});
+$('body').html(sC);
+
+
+	i = 0;
+function toggleOff(){
+	$('#'+i).toggle();
+}
+function toggleOn(){
+	$('#'+i).toggle();
+	var slideB = $('#'+i).attr('background');
+	if(slideB == undefined){
+		slideB = "#FFF";
+	}
+	var isOk = /^#[0-9A-F]{3,6}$/i.test(slideB);
+	console.log(isOk);
+	if(isOk){
+	var backgroundCSS = "background-color"	
+	var slideBackground = $('#'+i).attr('background');	
+	}else{
+	var backgroundCSS = "background-image"	
+	var slideBackground = 'url("'+$('#'+i).attr('background')+'")';
+	}
+	$('#'+i).css(backgroundCSS,slideBackground);
+	setTimeout(function () {
+	$('.background').css("background-image","","background-color","none").css(backgroundCSS,slideBackground);
+	}, 300);
+}
+
+// var maxI = 0
+// $('div').each(function(){
+// 	maxITest = $(this).attr('id');
+// 	if (maxITest >> maxI){
+// 		maxI = maxITest;
+// 		console.log(maxI);
+// 	}
+// });
+
+
+$("body").keydown(function(e) {
+  if(e.keyCode == 37) { // left
+    if(i!=0){
+    toggleOff();
+    i-= 1;
+    toggleOn();
+    }
+  }
+  else if(e.keyCode == 39) { // right
+    if(i!=maxI){
+    toggleOff();
+    i+= 1;
+    toggleOn();
+	}
+  }
+});
+
+
+</script>
+</html>
