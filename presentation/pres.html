@@ -55,6 +55,15 @@
 		margin-top: 10px;
 		font-family: "F2";
 	}
+	div.vid{
+		z-index: 10;
+		position: absolute;
+		left:50%;
+		top:50%;
+		transform: translate(-50%,-50%);
+		background-size: 100% auto;
+		background-position: center;
+	}
 	mark{
 		color: white;
 		position: fixed;
@@ -102,52 +111,47 @@
 var a = {"slides":[
 {"title":"Rhino<br>Grasshopper<br>Coding", "class":"t1"},
 {"title":"Instrument for tool making","image":"tool.jpg"},
-{"title":"CCCCC"},
+{"title":"","image":"5C-01.jpg"},
 {"title":"Computation","svg":"gear.svg", "colour":"#f44336", "class":"t1"},
 {"title":"", "image":"compDefinition.jpg", "colour":"#f44336", "ico":"gear.svg", "tcolor":"#f44336"},
 {"title":"Automation", "image":"Automation.jpg", "colour":"#f44336", "ico":"gear.svg", "tcolor":"#f44336"},
 {"class":"example", "title":"Adelaide Oval", "image":"", "background":"im/Adelaide-Oval_004.jpg", "ico":"gear.svg", "tcolor":"#f44336"},
 {"title":"Data", "image":"Data.png", "ico":"gear.svg", "tcolor":"#f44336"},
-{"class":"example", "title":"Parramatta", "image":"", "background":"im/Masterplan.jpg", "ico":"gear.svg", "tcolor":"#f44336"},
+{"class":"example", "title":"Wynyard Station Upgrade", "image":"", "background":"im/wyn1.jpg", "ico":"gear.svg", "tcolor":"#f44336"},
 {"title":"Creation", "colour":" #2196f3","class":"t1"},
 {"title":"", "image":"createDefinition.jpg", "ico":"art.svg", "tcolor":" #2196f3"},
-{"title":"Shape Making", "ico":"art.svg", "tcolor":" #2196f3"},
-{"class":"example", "title":"Tian Jing", "image":"", "ico":"art.svg", "tcolor":" #2196f3"},
-{"title":"Form Finding", "ico":"art.svg", "tcolor":" #2196f3"},
-{"class":"example", "title":"Malaysian Convention", "image":"", "ico":"art.svg", "tcolor":" #2196f3"},
-{"title":"Geometric Solutions", "ico":"art.svg", "tcolor":" #2196f3"},
-{"class":"example", "title":"Barangaroo Ferry Hub", "image":"", "ico":"art.svg", "tcolor":" #2196f3"},
+{"title":"Shape Making", "image":"shape.jpg", "ico":"art.svg", "tcolor":" #2196f3"},
+{"class":"example", "title":"NMMC", "background":"im/tj.jpg", "ico":"art.svg", "tcolor":" #2196f3"},
+{"title":"Form Finding", "image":"form.jpg","ico":"art.svg", "tcolor":" #2196f3"},
+{"class":"example", "title":"T1 Bifurcation Roof", "background":"im/syd1.jpg", "ico":"art.svg", "tcolor":" #2196f3"},
+{"title":"", "video":'<iframe width="1120" height="630" src="https://www.youtube.com/embed/9i8dGtcQxMk" frameborder="0" allowfullscreen></iframe>'},
+{"title":"Geometric Solutions","image":"geo.jpg","ico":"art.svg", "tcolor":" #2196f3"},
+{"class":"example", "title":"Barangaroo Ferry Hub", "background":"im/bfh1.jpg", "ico":"art.svg", "tcolor":" #2196f3"},
 {"title":"Calculation","colour":"#4caf50", "class":"t1"},
 {"title":"", "image":"calcDefinition.jpg", "ico":"technology.svg", "tcolor":" #4caf50"},
-{"title":"Yields", "ico":"technology.svg", "tcolor":" #4caf50"},
-{"class":"example", "title":"Durban Point", "image":"", "ico":"technology.svg", "tcolor":" #4caf50"},
-{"title":"Solar Analysis", "ico":"technology.svg", "tcolor":" #4caf50"},
-{"class":"example", "title":"Ivanhoe/Channel 9", "image":"", "ico":"technology.svg", "tcolor":" #4caf50"},
-{"title":"Responsive Designs", "ico":"technology.svg", "tcolor":" #4caf50"},
-{"class":"example", "title":"", "image":"", "ico":"technology.svg", "tcolor":" #4caf50"},
-{"title":"Isochrones", "ico":"technology.svg", "tcolor":" #4caf50"},
-{"class":"example", "title":"Chatswood/Largescale Projects", "image":"", "ico":"technology.svg", "tcolor":" #4caf50"},
-{"title":"Logistical Sheduling", "ico":"technology.svg", "tcolor":" #4caf50"},
-{"class":"example", "title":"AFC", "image":"", "ico":"technology.svg", "tcolor":" #4caf50"},
+{"title":"Yields", "image":"yield.jpg","ico":"technology.svg", "tcolor":" #4caf50"},
+{"class":"example", "title":"Durban Point", "background":"im/dp1.jpg", "ico":"technology.svg", "tcolor":" #4caf50"},
+{"title":"Solar Analysis", "image":"sol.jpg","ico":"technology.svg", "tcolor":" #4caf50"},
+{"class":"example", "title":"Ivanhoe", "background":"im/ivh.jpg", "ico":"technology.svg", "tcolor":" #4caf50"},
+{"title":"Isochrones","image":"iso.jpg", "ico":"technology.svg", "tcolor":" #4caf50"},
+{"class":"example", "title":"Macarthur Corridor Strategy", "background":"im/mac.jpg", "ico":"technology.svg", "tcolor":" #4caf50"},
+{"title":"Logistical Sheduling", "image":"log.jpg", "ico":"technology.svg", "tcolor":" #4caf50"},
+{"class":"example", "title":"Asian Football Cup", "background":"im/afc.jpg", "ico":"technology.svg", "tcolor":" #4caf50"},
 {"title":"Communication", "colour":"#ff9800", "class":"t1"},
 {"title":"", "image":"comDefinition.jpg", "ico":"round.svg", "tcolor":" #ff9800"},
-{"title":"SVG", "ico":"round.svg", "tcolor":" #ff9800"},
+{"title":"SVG","image":"svg.png", "ico":"round.svg", "tcolor":" #ff9800"},
 {"class":"example", "title":"Durban Masterplan", "image":"", "ico":"round.svg", "tcolor":" #ff9800"},
-{"title":"Assisting Rendering", "ico":"round.svg", "tcolor":" #ff9800"},
-{"title":"Real Time Environments", "ico":"round.svg", "tcolor":" #ff9800"},
-{"class":"example", "title":"Nothin", "image":"", "ico":"round.svg", "tcolor":" #ff9800"},
-{"title":"Virtual Reality", "ico":"round.svg", "tcolor":" #ff9800"},
-{"class":"example", "title":"Rooty Hill", "image":"", "ico":"round.svg", "tcolor":" #ff9800"},
+{"title":"Real Time Environments","image":"gamer.jpg", "ico":"round.svg", "tcolor":" #ff9800"},
+{"class":"example", "title":"Demo", "video":'<iframe width="1120" height="630" src="https://www.youtube.com/embed/eTt7AGIpV2I" frameborder="0" allowfullscreen></iframe>', "ico":"round.svg", "tcolor":" #ff9800"},
+{"title":"Virtual Reality","image":"oculus.jpg", "ico":"round.svg", "tcolor":" #ff9800"},
+{"class":"example", "title":"Demo", "video":'<iframe width="1120" height="630" src="https://www.youtube.com/embed/w-r9XXUbeRA" frameborder="0" allowfullscreen></iframe>', "ico":"round.svg", "tcolor":" #ff9800"},
 {"title":"Collaboration", "colour":"#9c27b0", "class":"t1"},
 {"title":"", "image":"collabDefinition.jpg", "ico":"person.svg", "tcolor":"#9c27b0"},
-{"title":"Grasshopper to Revit", "ico":"person.svg", "tcolor":"#9c27b0"},
-{"class":"example", "title":"Barangaroo Ferry Hub", "image":"", "ico":"person.svg", "tcolor":"#9c27b0"},
-{"class":"example", "title":"New Perth Stadium", "image":"", "ico":"person.svg", "tcolor":"#9c27b0"},
-{"title":"Grasshopper to Illustrator", "ico":"person.svg", "tcolor":"#9c27b0"},
-{"class":"example", "title":"Uluru", "image":"", "ico":"person.svg", "tcolor":"#9c27b0"},
-{"title":"Grasshopper to Excel", "ico":"person.svg", "tcolor":"#9c27b0"},
-{"class":"example", "title":"Durban/Something", "image":"", "ico":"person.svg", "tcolor":"#9c27b0"},
-{"title":"Conclusion"},
+{"title":"Grasshopper to Revit","image":"ghre.jpg", "ico":"person.svg", "tcolor":"#9c27b0"},
+{"class":"example", "title":"Barangaroo Ferry Hub", "background":"im/bfh2.jpg", "ico":"person.svg", "tcolor":"#9c27b0"},
+{"title":"Grasshopper to Illustrator","image":"ghil.jpg", "ico":"person.svg", "tcolor":"#9c27b0"},
+{"class":"example", "title":"Ayers Rock Resort", "background":"im/ay.jpg", "ico":"person.svg", "tcolor":"#9c27b0"},
+{"title":"Thankyou"},
 ]};
 
 var sC = '';
@@ -195,6 +199,12 @@ $.each(a.slides,function(i,k,v){
 		sC += '<svg width="300" height="300"><polygon style="fill:'+k.tcolor+'"/><image x="0" y="0" height="300" width="300" xlink:href="im/'+k.svg+'"></svg>'
 		sC += '</div>';
 	}
+	if(k.video){
+		sC += '<div class="vid">';
+		sC += k.video;
+		sC += '</div>';
+	}
+
 	if(k.ico){
 	sC+= '<svg class="ico" width="100" height="100"><polygon style="fill:'+k.tcolor+'" points="100,0 0,100 100,100"/><image x="52" y="52" height="35" width="35" xlink:href="ico/'+k.ico+'"></svg>';
 	}
